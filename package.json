@@ -3,6 +3,9 @@
 	"displayName": "LiveCover",
 	"publisher": "LiveCover",
 	"description": "",
+	"repository": {
+		"url": "https://github.com/rafalstapinski/vscode-livecover"
+	},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.47.0"
