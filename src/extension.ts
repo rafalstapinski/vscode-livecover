@@ -21,17 +21,17 @@ export async function activate(context: vscode.ExtensionContext) {
 
 			const payload = {
 				file_text: docText,
-				uri: document.uri,
-				workspace_folder: workspaceFolder?.uri.path
+				path: document.uri.path,
+				workspace_folder: workspaceFolder?.uri.path,
+				line: position.line
 			};
 
-			console.log(JSON.stringify(payload));
+			let resp = await axios.post("http://api.livecover.io/stat", payload);
 
-			let resp = await axios.post("http://raf.al", payload);
+			if (resp.status === 200) {
+				return new vscode.Hover(resp.data.text);
+			}
 
-			console.log(resp);
-	
-			return new vscode.Hover('I am a hover!');
 		}
 	});
 

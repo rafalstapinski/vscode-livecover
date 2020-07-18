@@ -1,6 +1,7 @@
 {
 	"name": "vscode-livecover",
-	"displayName": "vscode-livecover",
+	"displayName": "LiveCover",
+	"publisher": "LiveCover",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -14,12 +15,7 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "vscode-livecover.helloWorld",
-				"title": "Hello World"
-			}
-		]
+		"commands": []
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
